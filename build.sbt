@@ -2,7 +2,13 @@ name := "ScalaFX Hello World"
 
 ThisBuild / scalaVersion := "3.1.3"
 
-libraryDependencies += "org.scalafx" %% "scalafx" % "18.0.1-R28"
+libraryDependencies ++= Seq(
+  "org.scalafx" %% "scalafx" % "18.0.1-R28",
+  "org.scalatest" %% "scalatest" % "3.2.13" % Test,
+  "io.monix" %% "monix" % "3.4.1",
+  "dev.optics" %% "monocle-core" % "3.1.0",
+  "dev.optics" %% "monocle-macro" % "3.1.0"
+)
 
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-encoding", "utf8", "-feature")
 
@@ -15,7 +21,7 @@ ThisBuild / wartremoverErrors += Wart.Nothing
 
 lazy val startupTransition: State => State = "writeHooks" :: _
 
-lazy val root = crossProject(JSPlatform, JVMPlatform)
+lazy val root = crossProject(JVMPlatform)
   .crossType(CrossType.Full)
   .settings(
     name := "ScalaFX Hello World",
@@ -32,12 +38,12 @@ lazy val root = crossProject(JSPlatform, JVMPlatform)
       Seq(JacocoReportFormats.ScalaHTML, JacocoReportFormats.XML),
       "utf-8"
     ),
-    libraryDependencies ++= Seq(
-      "org.scalatest" %% "scalatest" % "3.2.13" % Test,
-      "io.monix" %%% "monix" % "3.4.1",
-      "dev.optics" %%% "monocle-core" % "3.1.0",
-      "dev.optics" %%% "monocle-macro" % "3.1.0"
-    )
+    // libraryDependencies ++= Seq(
+    //   "org.scalatest" %% "scalatest" % "3.2.13" % Test,
+    //   "io.monix" %% "monix" % "3.4.1",
+    //   "dev.optics" %% "monocle-core" % "3.1.0",
+    //   "dev.optics" %% "monocle-macro" % "3.1.0"
+    // )
   )
   .jvmSettings(
     libraryDependencies ++= Seq(

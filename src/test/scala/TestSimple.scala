@@ -1,8 +1,12 @@
 import org.scalatest.funsuite.AnyFunSuite
 
 class TestSimple extends AnyFunSuite:
-  test("bananone") {
+  test("simple") {
     assert(true)
+  }
+
+  test("simple2") {
+    assert(!false)
   }
 
 end TestSimple
