@@ -12,7 +12,7 @@ libraryDependencies ++= Seq(
 
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-encoding", "utf8", "-feature")
 
-mainClass := Some("hello.ScalaFXHelloWorld")
+mainClass := Some("view.AquariumSimulation")
 
 fork := true
 
