@@ -1,3 +1,5 @@
+package hello
+
 class Pair[A, B](val x: A, val y: B)
 class MyPair(override val x: Double, override val y: Double) extends Pair(x, y)
 

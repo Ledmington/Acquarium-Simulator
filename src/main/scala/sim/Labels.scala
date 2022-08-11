@@ -1,4 +1,4 @@
-package view
+package sim
 
 import scalafx.Includes.*
 import scalafx.scene.control.Label

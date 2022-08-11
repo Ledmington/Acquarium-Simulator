@@ -1,4 +1,4 @@
-package view
+package sim
 
 import scalafx.Includes._
 import scalafx.scene.control.TitledPane

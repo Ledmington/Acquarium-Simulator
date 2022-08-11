@@ -8,5 +8,3 @@ class TestSimple extends AnyFunSuite:
   test("simple2") {
     assert(!false)
   }
-
-end TestSimple

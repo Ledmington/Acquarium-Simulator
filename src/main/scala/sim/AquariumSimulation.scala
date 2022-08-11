@@ -1,4 +1,4 @@
-package view
+package sim
 
 import scalafx.application.JFXApp3
 import scalafx.geometry.Insets

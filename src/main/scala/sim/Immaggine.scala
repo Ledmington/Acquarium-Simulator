@@ -1,4 +1,4 @@
-package view
+package sim
 
 import scalafx.scene.image.Image
 import scalafx.scene.image.ImageView
