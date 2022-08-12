@@ -9,12 +9,8 @@ object ViewModule:
     val view: View
 
   type Requirements = ControllerModule.Provider
-  trait Component:
-    context: Requirements =>
-    class ViewImpl extends View:
-      // here come all your view methods implementation
-      def show(i: Int): Unit = println(i)
-      def update(): Unit = context.controller.notifyChange("changhed")
 
-  trait Interface extends Provider with Component:
+  import mvc.ViewComponent
+
+  trait Interface extends Provider with ViewComponent:
     self: Requirements =>
