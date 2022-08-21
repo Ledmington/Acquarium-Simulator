@@ -9,7 +9,7 @@ class TestFunnySpeck extends AnyFunSpec:
 
       it("should raise NoSuchElementException for head") {
         assertThrows[NoSuchElementException] {
-          val x:Set[Int] = Set()
+          val x: Set[Int] = Set()
           x.empty.head
         }
       }

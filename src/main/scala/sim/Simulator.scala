@@ -15,18 +15,17 @@ import scalafx.scene.control._
 import scalafx.scene.paint.Color._
 import scalafx.scene.paint._
 
-/**
- * Main class of the application
- */
+/** Main class of the application */
 object Simulator extends JFXApp3:
 
-  /**
-   * This method starts the application
-   *
-   * @author Filippo Barbari
-   *
-   * @return nothing
-   */
+  /** This method starts the application
+    *
+    * @author
+    *   Filippo Barbari
+    *
+    * @return
+    *   nothing
+    */
   override def start(): Unit =
     stage = new JFXApp3.PrimaryStage:
 
