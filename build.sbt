@@ -1,65 +1,29 @@
-name := "ScalaFX Hello World"
+name := "Aquarium Simulator"
 
 ThisBuild / scalaVersion := "3.1.3"
 
 libraryDependencies ++= Seq(
   "org.scalafx" %% "scalafx" % "18.0.1-R28",
-  "org.scalatest" %% "scalatest" % "3.2.13" % Test,
-  "io.monix" %% "monix" % "3.4.1",
-  "dev.optics" %% "monocle-core" % "3.1.0",
-  "dev.optics" %% "monocle-macro" % "3.1.0"
+  "org.scalatest" %% "scalatest" % "3.2.13" % Test//,
+  //"io.monix" %% "monix" % "3.4.1",
+  //"dev.optics" %% "monocle-core" % "3.1.0",
+  //"dev.optics" %% "monocle-macro" % "3.1.0"
 )
 
-scalacOptions ++= Seq("-unchecked", "-deprecation", "-encoding", "utf8", "-feature")
+scalacOptions ++= Seq(
+  "-unchecked",
+  "-deprecation",
+  "-encoding", "utf8",
+  "-feature",
+  "-Werror",
+  "-explain",
+  //"-new-syntax", "-rewrite",
+  "-indent", "-rewrite"
+)
 
-mainClass := Some("view.AquariumSimulation")
+mainClass := Some("sim.Simulator")
 
 fork := true
 
-ThisBuild / wartremoverWarnings ++= Warts.all
-ThisBuild / wartremoverErrors += Wart.Nothing
-
-lazy val startupTransition: State => State = "writeHooks" :: _
-
-lazy val root = crossProject(JVMPlatform)
-  .crossType(CrossType.Full)
-  .settings(
-    name := "ScalaFX Hello World",
-    assembly / assemblyJarName := "scalafx-hello.jar",
-    Global / onLoad := {
-      val old = (Global / onLoad).value
-      startupTransition compose old
-    },
-    // add XML report for sonarcloud
-    jacocoReportSettings := JacocoReportSettings(
-      "Jacoco Coverage Report",
-      None,
-      JacocoThresholds(),
-      Seq(JacocoReportFormats.ScalaHTML, JacocoReportFormats.XML),
-      "utf-8"
-    ),
-    // libraryDependencies ++= Seq(
-    //   "org.scalatest" %% "scalatest" % "3.2.13" % Test,
-    //   "io.monix" %% "monix" % "3.4.1",
-    //   "dev.optics" %% "monocle-core" % "3.1.0",
-    //   "dev.optics" %% "monocle-macro" % "3.1.0"
-    // )
-  )
-  .jvmSettings(
-    libraryDependencies ++= Seq(
-      "org.scala-lang.modules" %% "scala-swing" % "3.0.0"
-    )
-  )
-
-lazy val aggregate = (project in file("."))
-  .enablePlugins(ScalaUnidocPlugin)
-  .enablePlugins(GitHubPagesPlugin)
-  .enablePlugins(SiteScaladocPlugin)
-  .aggregate(root.jvm)
-  .settings(
-    name := "ScalaFX Hello World",
-    ScalaUnidoc / siteSubdirName := "latest/api/",
-    addMappingsToSiteDir(ScalaUnidoc / packageDoc / mappings, ScalaUnidoc / siteSubdirName)
-  )
-
-gitHubPagesSiteDir := baseDirectory.value / "target/site"
+//ThisBuild / wartremoverWarnings ++= Warts.all
+//ThisBuild / wartremoverErrors += Wart.Nothing

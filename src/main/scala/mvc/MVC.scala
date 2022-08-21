@@ -6,5 +6,6 @@ object MVC extends ModelModule.Interface with ViewModule.Interface with Controll
   override val view = new ViewImpl()
   override val controller = new ControllerImpl()
 
-  @main def main(): Unit =
+  /*@main*/
+  def main(): Unit =
     view.show(1)

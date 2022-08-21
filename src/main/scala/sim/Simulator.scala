@@ -15,7 +15,18 @@ import scalafx.scene.control._
 import scalafx.scene.paint.Color._
 import scalafx.scene.paint._
 
-object AquariumSimulation extends JFXApp3:
+/**
+ * Main class of the application
+ */
+object Simulator extends JFXApp3:
+
+  /**
+   * This method starts the application
+   *
+   * @author Filippo Barbari
+   *
+   * @return nothing
+   */
   override def start(): Unit =
     stage = new JFXApp3.PrimaryStage:
 
@@ -52,11 +63,10 @@ object AquariumSimulation extends JFXApp3:
                     spread = 0.25
               )
 
-//          right = new BorderPane:
-//            center = Labels.label
-//            left = ControlButtons.carnivoresFood
-//            right = ControlButtons.herbivoresFood
-          right = Immaggine.get()
+            right = new BorderPane:
+              center = Immaggine.get()
+              left = ControlButtons.carnivoresFood
+              right = ControlButtons.herbivoresFood
 
     //fill = Color.rgb(38, 38, 38)
 

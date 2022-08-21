@@ -2,7 +2,7 @@ package mvc
 
 object ViewModule:
   trait View:
-  // here come all your view methods
+    // here come all your view methods
     def show(i: Int): Unit
 
   trait Provider:
