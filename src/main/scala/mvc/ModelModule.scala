@@ -8,9 +8,6 @@ object ModelModule:
   trait Provider:
     val model: Model
 
-  trait Component:
-    class ModelImpl extends Model:
-    // here come all your model methods implementation
-      def m() = 1
+  import mvc.ModelComponent
 
-  trait Interface extends Provider with Component
+  trait Interface extends Provider with ModelComponent
