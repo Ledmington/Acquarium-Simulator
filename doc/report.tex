@@ -1,0 +1,184 @@
+\documentclass[12pt,a4paper,oneside,article]{article}
+
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry} % narrower margins
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{pgf-umlcd} % add "simplified" to hide empty parts in UML
+\usepackage{pgf-umlsd}
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\usepackage{enumitem}
+
+\newlist{legal}{enumerate}{10}
+\setlist[legal]{label*=\arabic*.}
+
+\tikzumlset{fill usecase=white} % for use case diagram
+
+\usetikzlibrary{shapes.multipart} % for state diagram
+
+\title{Aquarium Simulator}
+\author{
+	\href{mailto:filippo.barbari@studio.unibo.it}{Elisa Albertini},
+	\href{mailto:filippo.barbari@studio.unibo.it}{Filippo Benvenuti},
+	\href{mailto:filippo.barbari@studio.unibo.it}{Filippo Barbari},
+	\href{mailto:filippo.barbari@studio.unibo.it}{Emanuele Lamagna}
+}
+\date{2 ottobre 2022}
+
+\begin{document}
+	\maketitle
+	
+	\begin{abstract}
+		Brief summary. (non so se ci server)
+	\end{abstract}
+	
+	\tableofcontents
+	\clearpage
+
+    \section{Introduzione}
+    
+    \section{Processo di sviluppo}
+    
+    \section{Analisi dei requisiti}
+    \subsection{Requisiti di business}
+    \begin{legal}[label*=1.\arabic*.]
+   		\item Simulazione dell'evoluzione dell'ecosistema di un acquario popolato di pesci e alghe che interagiscono tra loro
+   		\begin{legal}
+   			\item Generazione di diversi scenari configurabili
+   			\item Interazione con la simulazione per la modifica e l’aggiunta di ulteriori parametri o vincoli
+   		\end{legal}
+    \end{legal}
+
+	\subsection{Requisiti utente}
+	\begin{legal}[label*=2.\arabic*.]
+    	\item osservare in tempo reale le interazioni tra le varie specie e il loro ciclo di vita, aggiungendo e rimuovendo pesci
+    	\item i dati di ogni pesce verranno memorizzati all’interno di un database
+    	\item si potranno estrarre informazioni di vario genere come la probabilità di sopravvivenza di una data specie
+    	\item verranno visualizzati in tempo reale
+    	\begin{legal}
+    		\item numero di esseri viventi divisi per specie
+    		\item temperatura dell’acqua
+    		\item luce
+    		\item pH dell’acqua
+    		\item impurit\'a dell’acqua
+    		\item ossigeno
+    	\end{legal}
+    	\item interagire con la simulazione regolando manualmente
+    	\begin{legal}
+    		\item aggiungendo cibo
+    		\item regolando il termostato
+    		\item regolando il filtro dell’acqua
+    		\item pulendo l’acquario
+    		\item regolare l’illuminazione per avere pi\'u o meno luce
+    	\end{legal}
+    	\item pesce controllabile manualmente dall’utente
+    	\item estrazione dell’albero genealogico di ogni pesce dal database
+    \end{legal}
+    
+    \subsection{Requisiti funzionali}
+    \begin{legal}[label*=3.\arabic*.]
+    	\item La simulazione è basata su un modello ad eventi discreti in cui è presente un tempo virtuale che scandisce le iterazioni
+    \end{legal}
+
+	\subsection{Requisiti non funzionali}
+	\begin{legal}[label*=4.\arabic*.]
+		\item deve essere fast
+	\end{legal}
+    
+    \subsection{Requisiti di implementazione}
+    \begin{legal}[label*=5.\arabic*.]
+    	\item monadi
+    	\item flyweight (tipo un sacco)
+    \end{legal}
+    
+    \section{Design dell'architettura}
+    \subsection{Casi d'uso}
+    \begin{tikzpicture}
+    	\begin{umlsystem}[x=5] {} % empty title
+    		\umlusecase[name=a,width=2.5cm] {Start/stop/save/load simulation}
+    		\umlusecase[name=b,x=6,width=2.5cm] {Use case b}
+    		\umlusecase[name=c,x=6,y=-3,width=2.5cm] {Use case c}
+    		\umlusecase[name=d,y=-3,width=2.5cm] {Use case d}
+    	\end{umlsystem}
+    
+    	\node [above] at (current bounding box.north) {Aquarium Simulator};
+    	
+    	\umlactor[y=-1] {User}
+    	%\umlactor[y=-3] {Actor 2}
+    	%\umlactor[x=15] {Actor 3}
+    	
+    	\umlassoc{User}{a}
+    	%\umlassoc{Actor 2}{a}
+    	
+    	
+    	% \umlextend{a}{b}
+    	% \umlinclude{c}{d}
+    	
+    	% manual versions of the above
+    	\draw [tikzuml dependency style] (a) -- node[above] {$\ll \text{extend} \gg$} (b);
+    	\draw [tikzuml dependency style] (d) -- node[above] {$\ll \text{include} \gg$} (c);
+    	
+    	% bent association
+    	%\draw [tikzuml association style] (a) to[bend right=10] (Actor 3);
+    \end{tikzpicture}
+    
+    \section{Design dettagliato}
+    (serve che sia una sezione separata dal design architetturale)
+    \subsection{Class diagram}
+    \iffalse
+    \begin{tikzpicture}
+    	\begin{class}[text width=5cm]{BankAccount}{0,0}
+    		\attribute{owner : String}
+    		\attribute{balance : Dollars = 0}
+    		\operation{deposit ( amount : Dollars )}
+    		\operation[0]{withdrawl ( amount : Dollars )}
+    	\end{class}
+    	\begin{class}[text width=7cm]{CheckingAccount}{-5,-5}
+    		\inherit{BankAccount}
+    		\attribute{insufficientFundsFee : Dollars}
+    		\operation{processCheck ( checkToProcess : Check )}
+    		\operation{withdrawal ( amount : Dollars )}
+    	\end{class}
+    	\begin{class}[text width=7cm]{SavingsAccount}{5,-5}
+    		\inherit{BankAccount}
+    		\attribute{annualInteresRate : Percentage}
+    		\operation{depositMonthlyInterest()}
+    		\operation{withdrawal ( amount : Dollars)}
+    	\end{class}
+    \end{tikzpicture}\fi
+    
+    \subsection{State diagram}
+    \iffalse
+    \begin{tikzpicture}[stateNode/.style={rectangle split, rectangle split parts=2, draw, rounded corners, fill=yellow!10}]
+    	\node[stateNode]{
+    		\tikz\node[draw=red, rectangle, rounded corners]{title};
+    		\nodepart{two}
+    		\begin{tabular}{c}
+    			content \\ more content
+    		\end{tabular}
+    	};
+    \end{tikzpicture}\fi
+    
+    \subsection{Sequence diagram}
+    \iffalse
+    \begin{sequencediagram}
+    	\newthread[blue]{s1}{:Server1}
+    	\newinst{db}{:Database}
+    	\newthread[red]{s2}{:Server2}
+    	\begin{call}{s1}{reading}{db}{data}
+    		\postlevel
+    	\end{call}
+    	\prelevel\prelevel
+    	\setthreadbias{east}
+    	\begin{call}{s2}{reading}{db}{data}
+    		\postlevel
+    	\end{call}
+    \end{sequencediagram}\fi
+    
+    \section{Implementazione}
+    
+    \section{Conclusioni e lavori futuri}
+\end{document}
