@@ -6,3 +6,4 @@ project/plugins/project/
 .bsp/
 doc/*
 !doc/*.tex
+!doc/*.sty
