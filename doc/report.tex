@@ -139,7 +139,77 @@
     
     \subsection{Requisiti funzionali}
     \begin{legal}[label*=3.\arabic*.]
-    	\item La simulazione è basata su un modello ad eventi discreti in cui è presente un tempo virtuale che scandisce le iterazioni
+    	\item GUI
+    	\begin{legal}
+    		\item controlli utente
+    		\begin{legal}
+    			\item controllo intensità luminosa
+    			\item controllo temperatura
+    			\item controllo filtro dell'acqua (ossigenazione)
+    			\item aggiunta pesce o alga
+    			\item rimozione pesce o alga
+    			\item start/stop simulazione
+    			\item aggiunta cibo per pesci
+    			\item pulizia acquario
+    		\end{legal}
+    		\item simulation view
+    		\item grafici andamento parametri
+    		\item download dati simulazione (csv)
+    		\item visualizzazione parametri in tempo reale
+    		\item cronistoria eventi
+    	\end{legal}
+    	\item simulation engine
+    	\begin{legal}
+    		\item acquario
+    		\begin{legal}
+    			\item dimensione
+    			\item parametri acqua
+    			\item ecosistema (popolazione + vegetazione)
+    		\end{legal}
+    		\item pesce
+    		\begin{legal}
+    			\item posizione nell'acquario
+    			\item parametri del pesce
+    			\begin{legal}
+    				\item età
+    				\item velocità
+    				\item fame
+    				\item dimensione
+    				\item nome
+    			\end{legal}
+    			\item movimento
+    		\end{legal}
+    		\item alga
+    		\begin{legal}
+    			\item posizione nell'acquario
+    			\item dimensione
+    			\item velocità produzione ossigeno
+    		\end{legal}
+    		\item interazioni fra entità
+    		\begin{legal}
+    			\item pesce $\iff$ pesce
+    			\item pesce $\Rightarrow$ alga
+    			\item pesce $\iff$ acquario
+    			\item acquario $\iff$ alga
+    		\end{legal}
+%    		Amelia: dobbiamo muoverci
+%    		Sempre Amelia: siamo super in ritardo (il progetto è iniziato ieri)
+%    		ancora: pensavo di esserti simpatica
+    	\end{legal}
+    	\item database
+    	\begin{legal}
+    		\item memorizzazione dati ad ogni iterazione
+    		\begin{legal}
+    			\item dati pesci
+    			\item dati acquario
+    			\item dati alghe
+    		\end{legal}
+    		\item estrazione dati
+    		\begin{legal}
+    			\item csv
+    			\item immagini
+    		\end{legal}
+    	\end{legal}
     \end{legal}
 
 	\subsection{Requisiti non funzionali}
