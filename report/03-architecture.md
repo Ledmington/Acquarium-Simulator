@@ -4,6 +4,8 @@
 
 Per un'architettura idonea del progetto che vogliamo sviluppare abbiamo deciso di sfruttare il pattern MVC, separandolo quindi in tre macro componenti: Model, View e Controller, di seguito uno schema riassuntivo della composizione e interazione dei componenti:
 
+![MVC_scheme](img/MVC_scheme.png)
+
 ### Descrizione del pattern MVC
 
 MVC (Model-View-Controller) è un pattern di design del software comunemente usato per implementare interfacce utente, dominio e logica di controllo. Il punto focale di questo pattern è la separazione tra la logica del software e l'interfaccia dell'utente, tale "separazione di concetti" permette una migliore divisione del lavoro tra team di sviluppatori. Le tre principali componenti di questo pattern sono:
@@ -21,12 +23,26 @@ MVC (Model-View-Controller) è un pattern di design del software comunemente usa
 		Il Controller fa da ponte tra il Model e la View, si occupa di aggiornarli opportunamente in risposta all'input dell'utente. Nel nostro caso il Controller incapsula anche la logica di aggiornamento dei dati del Model per ogni iterazione della simulazione.
 	</dd>
 </dl>
-Perchè abbiamo scelto MVC?
-In cosa ci ha semplificato la vita?
+
+È stato scelto il pattern MVC per vari motivi. 
+Prima di tutto si è tenuto in considerazione che MVC è uno dei pattern più conosciuti ed utilizzati, il che rende più semplice ricercare documentazione ed esempi da cui prendere spunto. 
+Oltre a ciò, dato che il team, nella sua interezza, ha già utilizzato questo pattern in altri progetti, questa scelta rappresentava la soluzione più sicura ed efficiente per realizzare un solido design architetturale per il progetto. 
 
 ### Descrizione dettagliata delle componenti
 
-Sottocomponenti dei macrocomponenti mvc
+Sottocomponenti dei macrocomponenti mvc:
+* Model 
+  * Acquario
+  * Pesce
+  * Alga
+  * Modellazione delle interazioni fra i vari elementi della simulazione
+* View
+  * GUI
+    * Control Bar
+    * Simulation view
+* Control
+  * Simulation engine
 
-### scelte tecnologiche cruciali ai fini architetturali
-Se abbiamo usato un qualche strumento che ci aiutasse con la progettazione architetturale, ma credo andremo a braccio.
+//Diagramma delle classi
+
+// Scelte tecnologiche cruciali ai fini architetturali
