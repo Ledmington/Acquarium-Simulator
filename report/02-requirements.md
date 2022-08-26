@@ -1,8 +1,8 @@
-## Analisi dei requisiti
+## 3 Analisi dei requisiti
 
-### Requisiti di business
+### 3.1 Requisiti di business
 
-**Ambito**: Siamo in un negozio di pesci dove viene richiesta la
+**1.1. Ambito**: Siamo in un negozio di pesci dove viene richiesta la
 simulazione di un acquario reale personalizzabile, inserendo quindi più
 o meno pesci di diverso tipo immersi in un ambiente più o meno ricco di
 vegetazione, con lo scopo di osservare la salute dei pesci nel corso
@@ -12,20 +12,20 @@ all'interno del negozio, sia per essere venduto al cliente finale, il
 quale potrà utilizzarlo per preparasi al meglio al mantenimento dei
 pesci prima dell'effettivo acquisto.
 
-**Esigenze aziendali**: 
+**1.2. Esigenze aziendali**: 
 1. Simulazione di un acquario contenente pesci e vegetazione
 2. Interfaccia grafica d'intuitiva interazione.
 3. Possibilità di visionare i pesci in tempo reale.
 4. Facile installazione su diversi dispositivi fissi (il mobile non è richiesto).
 5. Possibilità di visionare l'andamento dei parametri relativi ai pesci.
 
-**Problemi**: Il negozio ha ricevuto diverse richieste di rimborso a seguito del decesso
+**1.3 Problemi**: Il negozio ha ricevuto diverse richieste di rimborso a seguito del decesso
 di alcuni pesci venduti, non essendo in grado di dimostrare che questi fossero stati
 in ottima salute e che il vero motivo del fattaccio fosse un'erronea gestione dell'ac-
 quario, il negozio richiede un simulatore da fornire ai clienti per tutelarsi e tutelare
 i pesci.
 
-### Requisiti utente
+### 3.2 Requisiti utente
 Con lo scopo di mantenere il più vero possibile la stesura dei requisiti d'utente, abbiamo
 simulato una vera e propria intervista con il Product Owner:
 
@@ -59,96 +59,96 @@ Ovviamente il cliente dovrà interagire con l'acquario, altrimenti non potrebbe 
 Per la prima versione del prodotto finito quello che ci siamo detti è più che sufficiente, ma per il futuro potrebbe essere interessante aggiungere qualche funzionalità per renderlo più apprezzabile come ad esempio: la possibilità di controllare un pesce all'interno dell'acquario manualmente per rendere la simulazione non solo un lavoro ma anche ludica, ricostruire l'albero genealogico dei pesci, per osservare la dinastia e rendersi conto di quale famiglia sia stata la più forte nelle generazioni. Inoltre si potrebbe consentire di spegnere l'acquario e riprendere dal punto in cui si era rimasti e mettere la possibilità di velocizzare o rallentare la simulazione per evitare le parti noiose o per osservare nel dettaglio certi momenti.
 
 Dall'intervista con Filippo Benvenuti, il Product Owner, sono stati dedotti i seguenti requisiti d'utente:  
-1. osservare in tempo reale:
-   * 1.1. ciclo di vita dei pesci
-   * 1.2. interazioni fra pesci
-   * 1.3. interazioni fra pesci e vegetazione
-2. aggiungere e rimuovere pesci in tempo reale
-3. memorizzazione dati dell'acquario all’interno di un database:
-   * 3.1. possibilità di estrarre informazioni interessanti
-   * 3.2. visionare grafici sull'andamento dei dati salvati
-4. visualizzazione in tempo reale di:
-   * 4.1. numero di esseri viventi divisi per specie
-   * 4.2. temperatura dell’acqua
-   * 4.3. luminosità
-   * 4.4. pH dell’acqua
-   * 4.5. impurità dell'acqua
-   * 4.6. ossigeno
-5. interazione con la simulazione tramite:
-   * 5.1. aggiunta cibo
-   * 5.2. regolazione termostato
-   * 5.3. pulizia acquario
-   * 5.4. regolazione illuminazione
-   * 5.5. play/stop della simulazione
-6. Opzionali per il futuro:
-   * 6.1. pesce controllabile manualmente dall’utente
-   * 6.2. estrazione dell’albero genealogico di ogni pesce dal database
-   * 6.3. salvataggio/caricamento della simulazione
-   * 6.4. velocizzare/rallentare la simulazione
+* 2.1. osservare in tempo reale:
+   * 2.1.1. ciclo di vita dei pesci
+   * 2.1.2. interazioni fra pesci
+   * 2.1.3. interazioni fra pesci e vegetazione
+* 2.2. aggiungere e rimuovere pesci in tempo reale
+* 2.3. memorizzazione dati dell'acquario all’interno di un database:
+   * 2.3.1. possibilità di estrarre informazioni interessanti
+   * 2.3.2. visionare grafici sull'andamento dei dati salvati
+* 2.4. visualizzazione in tempo reale di:
+   * 2.4.1. numero di esseri viventi divisi per specie
+   * 2.4.2. temperatura dell’acqua
+   * 2.4.3. luminosità
+   * 2.4.4. pH dell’acqua
+   * 2.4.5. impurità dell'acqua
+   * 2.4.6. ossigeno
+* 2.5. interazione con la simulazione tramite:
+   * 2.5.1. aggiunta cibo
+   * 2.5.2. regolazione termostato
+   * 2.5.3. pulizia acquario
+   * 2.5.4. regolazione illuminazione
+   * 2.5.5. play/stop della simulazione
+* 2.6. Opzionali per il futuro:
+   * 2.6.1. pesce controllabile manualmente dall’utente
+   * 2.6.2. estrazione dell’albero genealogico di ogni pesce dal database
+   * 2.6.3. salvataggio/caricamento della simulazione
+   * 2.6.4. velocizzare/rallentare la simulazione
 
-### Requisiti funzionali
-1. GUI
-   * 1.1. controlli utente
-     * 1.1.1. controllo intensità luminosa
-     * 1.1.2. controllo temperatura
-     * 1.1.3. controllo filtro dell'acqua (ossigenazione)
-     * 1.1.4. aggiunta pesce o alga
-     * 1.1.5. rimozione pesce o alga
-     * 1.1.6. start/stop simulazione
-     * 1.1.7. aggiunta cibo per pesci
-     * 1.1.8. pulizia acquario
-   * 1.2. simulation view
-   * 1.3. grafici andamento parametri
-   * 1.4. download dati simulazione (csv)
-   * 1.5. visualizzazione parametri in tempo reale
-   * 1.6. cronistoria eventi
-2. simulation engine
-    * 2.1. acquario
-      * 2.1.1. dimensione
-      * 2.1.2. parametri acqua
-      * 2.1.3. ecosistema (popolazione + vegetazione)
-   * 2.2. pesce 
-      * 2.2.1. posizione nell'acquario
-      * 2.2.2. parametri del pesce
-         * 2.2.2.1. età
-         * 2.2.2.2. velocità
-         * 2.2.2.3. fame
-         * 2.2.2.4. dimensione
-         * 2.2.2.5. nome
-      * 2.2.3. movimento
-   * 2.3. alga
-      * 2.3.1. posizione nell'acquario
-      * 2.3.2. dimensione
-      * 2.3.3. velocità produzione ossigeno
-   * 2.4. interazioni fra entità
-      * 2.4.1. pesce ⇐⇒ pesc
-      * 2.4.2. pesce ⇒ alga
-      * 2.4.3. pesce ⇐⇒ acquario
-      * 2.4.4. acquario ⇐⇒ alga
-3. database
-   * 3.1. memorizzazione dati ad ogni iterazione
-     * 3.1.1. dati pesci
-     * 3.1.2. dati acquario
-     * 3.1.3. dati alghe
-   * 3.2. dati pesci
-     * 3.2.1. csv
-     * 3.2.2. immagini
+### 3.3 Requisiti funzionali
+* 3.1. GUI
+   * 3.1.1. controlli utente
+     * 3.1.1.1. controllo intensità luminosa
+     * 3.1.1.2. controllo temperatura
+     * 3.1.1.3. controllo filtro dell'acqua (ossigenazione)
+     * 3.1.1.4. aggiunta pesce o alga
+     * 3.1.1.5. rimozione pesce o alga
+     * 3.1.1.6. start/stop simulazione
+     * 3.1.1.7. aggiunta cibo per pesci
+     * 3.1.1.8. pulizia acquario
+   * 3.1.2. simulation view
+   * 3.1.3. grafici andamento parametri
+   * 3.1.4. download dati simulazione (csv)
+   * 3.1.5. visualizzazione parametri in tempo reale
+   * 3.1.6. cronistoria eventi
+* 3.2. simulation engine
+    * 3.2.1. acquario
+      * 3.2.1.1. dimensione
+      * 3.2.1.2. parametri acqua
+      * 3.2.1.3. ecosistema (popolazione + vegetazione)
+   * 3.2.2. pesce 
+      * 3.2.2.1. posizione nell'acquario
+      * 3.2.2.2. parametri del pesce
+         * 3.2.2.2.1. età
+         * 3.2.2.2.2. velocità
+         * 3.2.2.2.3. fame
+         * 3.2.2.2.4. dimensione
+         * 3.2.2.2.5. nome
+      * 3.2.2.3. movimento
+   * 3.2.3. alga
+      * 3.2.3.1. posizione nell'acquario
+      * 3.2.3.2. dimensione
+      * 3.2.3.3. velocità produzione ossigeno
+   * 3.2.4. interazioni fra entità
+      * 3.2.4.1. pesce ⇐⇒ pesc
+      * 3.2.4.2. pesce ⇒ alga
+      * 3.2.4.3. pesce ⇐⇒ acquario
+      * 3.2.4.4. acquario ⇐⇒ alga
+* 3.3. database
+   * 3.3.1. memorizzazione dati ad ogni iterazione
+     * 3.3.1.1. dati pesci
+     * 3.3.1.2. dati acquario
+     * 3.3.1.3. dati alghe
+   * 3.3.2. dati pesci
+     * 3.3.2.1. csv
+     * 3.3.2.2. immagini
 
-### Requisiti non funzionali
-1. GUI responsiva
-2. usabilità
-3. semplice installazione cross-platform
+### 3.4 Requisiti non funzionali
+* 4.1. GUI responsiva
+* 4.2. usabilità
+* 4.3. semplice installazione cross-platform
 
-### Requisiti di implementazione
-1. Scala
-2. ScalaFX
-3. ScalaTest
-4. Prolog
-5. Git
-   * 5.1. GitHub
-   * 5.2. GitHub Projects
-   * 5.3. GitHub Actions
-6. sbt
+### 3.5 Requisiti di implementazione
+* 5.1. Scala
+* 5.2. ScalaFX
+* 5.3. ScalaTest
+* 5.4. Prolog
+* 5.5. Git
+   * 5.5.1. GitHub
+   * 5.5.2. GitHub Projects
+   * 5.5.3. GitHub Actions
+* 5.6. sbt
 
 
 

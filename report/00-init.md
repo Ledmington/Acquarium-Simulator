@@ -7,7 +7,7 @@
 | Benvenuti Filippo | filippo.benvenuti3@studio.unibo.it | 0001027545 |
 | Lamagna Emanuele  |  emanuele.lamagna@studio.unibo.it  | 0001027566 |
 
-## Introduzione
+## 1. Introduzione
 Per il progetto di Paradigmi di Programmazione e Sviluppo si è deciso di realizzare un'applicazione volta a simulare un ecosistema acquatico all’interno di un acquario. 
 
 Sarà possibile osservare in tempo reale le interazioni tra le varie specie e il loro ciclo di vita, aggiungendo e rimuovendo pesci e alghe. Inoltre i dati di ogni pesce verranno memorizzati all’interno di un database da cui si potranno estrarre informazioni di vario genere come la probabilità di sopravvivenza di una data specie.

@@ -1,12 +1,15 @@
-## Design architetturale
+## 4 Design architetturale
 
-### Architettura complessiva
+### 4.1 Casi d'uso
+![casi d'uso](img/casi_d_uso.png)
+
+### 4.2 Architettura complessiva
 
 Per un'architettura idonea del progetto che vogliamo sviluppare abbiamo deciso di sfruttare il pattern MVC, separandolo quindi in tre macro componenti: Model, View e Controller, di seguito uno schema riassuntivo della composizione e interazione dei componenti:
 
 ![MVC_scheme](img/MVC_scheme.png)
 
-### Descrizione del pattern MVC
+### 4.3 Descrizione del pattern MVC
 
 MVC (Model-View-Controller) è un pattern di design del software comunemente usato per implementare interfacce utente, dominio e logica di controllo. Il punto focale di questo pattern è la separazione tra la logica del software e l'interfaccia dell'utente, tale "separazione di concetti" permette una migliore divisione del lavoro tra team di sviluppatori. Le tre principali componenti di questo pattern sono:
 <dl>
@@ -28,7 +31,7 @@ MVC (Model-View-Controller) è un pattern di design del software comunemente usa
 Prima di tutto si è tenuto in considerazione che MVC è uno dei pattern più conosciuti ed utilizzati, il che rende più semplice ricercare documentazione ed esempi da cui prendere spunto. 
 Oltre a ciò, dato che il team, nella sua interezza, ha già utilizzato questo pattern in altri progetti, questa scelta rappresentava la soluzione più sicura ed efficiente per realizzare un solido design architetturale per il progetto. 
 
-### Descrizione dettagliata delle componenti
+### 4.4 Descrizione dettagliata delle componenti
 
 Sottocomponenti dei macrocomponenti mvc:
 * Model 
