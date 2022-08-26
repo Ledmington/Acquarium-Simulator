@@ -1,4 +1,4 @@
-# Report finale PPS - Virsim
+# Report finale PPS - aq-sim
 
 | Nome              |                Email               | Matricola  |
 | ----------------- | :--------------------------------: | ---------- |
