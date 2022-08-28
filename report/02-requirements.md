@@ -21,39 +21,31 @@ pesci prima dell'effettivo acquisto.
 
 **1.3 Problemi**: Il negozio ha ricevuto diverse richieste di rimborso a seguito del decesso
 di alcuni pesci venduti, non essendo in grado di dimostrare che questi fossero stati
-in ottima salute e che il vero motivo del fattaccio fosse un'erronea gestione dell'ac-
-quario, il negozio richiede un simulatore da fornire ai clienti per tutelarsi e tutelare
-i pesci.
+in ottima salute e che il vero motivo della tragedia fosse un'erronea gestione dell'acquario, il negozio richiede un simulatore da fornire ai clienti per tutelarsi e tutelare i pesci.
 
 ### 3.2 Requisiti utente
-Con lo scopo di mantenere il più vero possibile la stesura dei requisiti d'utente, abbiamo
-simulato una vera e propria intervista con il Product Owner:
+Con lo scopo di mantenere la stesura dei requisiti d'utente più realistica possibile, abbiamo simulato una vera e propria intervista con il Product Owner:
 
 >**Descriva in una frase ciò di cui ha bisogno.**  
-Buongiorno, sono Filippo Benvenuti, proprietario e commesso del negozio di pesci "lo pesciazzo", in poche parole ho bisogno di un programma che dia la possibilità ai miei
-clienti di provare, prima di comprarmi i pesci, a mantenere una sorta di acquario digitale
-che faccia da simulazione ad uno vero.  
+Buongiorno, sono Filippo Benvenuti, proprietario e commesso del negozio di pesci "Fish Paradise", in poche parole ho bisogno di un programma che dia la possibilità ai miei clienti di provare, prima di comprarmi i pesci, a mantenere una sorta di acquario digitale che faccia da simulazione ad uno vero.  
 
 >**Cosa intende lei per simulazione?**  
-Non sono un esperto, mi riferisco alla possibilità di portarsi a casa un acquario in tutto
-e per tutto che abbia la possibilità di contenere più o meno pesci e magari anche la vegetazione, per dare al cliente la possibilità di allenarsi prima con un acquario in cui non
-può fare del male a nessuno e poi quando è più esperto tornare in negozio e acquistare
-un vero acquario con veri pesci. In questo modo spero di diminuire il numero di decessi dei pesci che vendo, purtroppo...
+Non sono un esperto, mi riferisco alla possibilità di portarsi a casa un acquario in tutto e per tutto che abbia la possibilità di contenere più o meno pesci e magari anche la vegetazione, per dare al cliente la possibilità di allenarsi prima con un acquario in cui non può fare del male a nessuno e poi quando è più esperto tornare in negozio e acquistare un vero acquario con veri pesci. Spero di diminuire il numero di decessi dei pesci che vendo...
 
 >**Quali sono le caratteristiche di un acquario?**  
-Un acquario in primo luogo si differenzia dagli altri per il volume d'acqua che riesce a contenere e la forma, ma non penso che questi siano dati essenziali per la versione digitale, mi immagino un acquario piatto dove i pesci si muovono solo a destra a sinistra in alto e in basso.. La dimensione dell'acquario potrebbe essere utile anche se influisce solo sul numero di pesci che riesce a contenere. Le caratteristiche principali che poi sono quelle che influenzano i pesci che ci vivono all'interno riguardano per la maggior parte l'acqua, parliamo ad esempio della temperatura dell'acqua, importante sia quella giusta per i tipi di pesci all'interno dell'acquario e la vegetazione, non è difficile esistono sistemi che dopo averli impostati inizialmente la mantengono fissa scaldandola quando serve, raro che l'acqua sia troppo calda. Il PH dell'acqua è particolare, alcuni pesci sono molto sensibili ai cambiamenti del PH, bisogna stare attenti che questo valore non diventi ne troppo alto ne troppo basso, la causa principale dei decessi dei pesci avviene per una scarsa o del tutto assente considerazione del PH, il quale tende ad alzarsi per effetto della presenza dei pesci, le piante possono aiutare ad abbassarlo. Le piante inoltre offrono l'importante ossigeno per i pesci, spesso succede che non è abbastanza e si usa una pompa che ne aumenta la concentrazione nell'acqua, sappiamo bene cosa succederebbe se venisse a mancare l'ossigeno. La luce nell'acquario è utile alle piante per crescere, i pesci non sono molto influenzati, lo sono invece dall'impurità dell'acqua, ecco perché è importante tenere sempre molto pulito l'acquario!
+Un acquario in primo luogo si differenzia dagli altri per il volume d'acqua che riesce a contenere e la forma, ma non penso che questi siano dati essenziali per la versione digitale, mi immagino un acquario piatto dove i pesci si muovono solo a destra a sinistra in alto e in basso. La dimensione dell'acquario potrebbe essere utile anche se influisce solo sul numero di pesci che riesce a contenere. Le caratteristiche principali, che poi sono quelle che influenzano i pesci che ci vivono all'interno, riguardano per la maggior parte l'acqua, parliamo ad esempio della temperatura dell'acqua, importante sia quella giusta per i tipi di pesci all'interno dell'acquario e la vegetazione, non è difficile che esistano sistemi che dopo averli impostati inizialmente la mantengono fissa scaldandola quando serve, raro che l'acqua sia troppo calda. Il pH dell'acqua è particolare, alcuni pesci sono molto sensibili ai cambiamenti del pH, bisogna stare attenti che questo valore non diventi né troppo alto nè troppo basso, la causa principale dei decessi dei pesci avviene per una scarsa o del tutto assente considerazione del pH, il quale tende ad alzarsi per effetto della presenza dei pesci, le piante possono aiutare ad abbassarlo. Le piante inoltre offrono l'importante ossigeno per i pesci, spesso succede che non è abbastanza e si usa una pompa che ne aumenta la concentrazione nell'acqua, sappiamo bene cosa succederebbe se venisse a mancare l'ossigeno. La luce nell'acquario è utile alle piante per crescere, i pesci non sono molto influenzati, lo sono invece dall'impurità dell'acqua, ecco perché è importante tenere sempre molto pulito l'acquario!
 
 >**E invece le caratteristiche di un pesce?**  
-Ogni pesce ha caratteristiche proprie che lo contraddistinguono, in realtà la complessità biologica dei pesci è tanta, per questo programmino mi limiterei a distinguerli in modo semplificato, d'altronde l'obiettivo è quello di formare clienti inesperti non di certo un biologo marino. Di prima battuta possiamo dividere i pesci in carnivori ed erbivori, entrambi se non nutriti inizieranno a cacciare per trovarsi il cibo in autonomia, i carnivori diventano violenti attaccando gli altri pesci, preferiscono gli erbivori se ci sono, gli erbivori oltre a scappare se malnutriti attaccheranno le piante nell'acquario, mangiandole. Le principali caratteristiche di un pesce possiamo semplificarle in dimensione, velocità, fame ed età, queste caratteristiche sono naturalmente legate tra di loro un pò come succede per gli umani, ad esempio un pesce di grandi dimensioni e età avanzata andrà sicuramente più piano di uno snello e giovincello, all'aumentare delle dimensioni aumenta anche la fame, per aumentare la veridicità dell'acquario sarebbe importante tenere in considerazione queste caratteristiche per vedere come influenzano la vita di un pesce durante la simulazione.
+Ogni pesce ha caratteristiche proprie che lo contraddistinguono, in realtà la complessità biologica dei pesci è tanta, per questo programma mi limiterei a distinguerli in modo semplificato, d'altronde l'obiettivo è quello di formare clienti inesperti, non di certo un biologo marino. Di prima battuta possiamo dividere i pesci in carnivori ed erbivori, entrambi se non nutriti inizieranno a cacciare per trovarsi il cibo in autonomia, i carnivori diventeranno violenti attaccando gli altri pesci, preferendo gli erbivori se presenti, gli erbivori oltre a scappare se malnutriti attaccheranno le piante nell'acquario, mangiandole. Le principali caratteristiche di un pesce possiamo semplificarle in dimensione, velocità, fame ed età, queste caratteristiche sono naturalmente legate tra di loro un pò come succede per gli umani, ad esempio un pesce di grandi dimensioni e età avanzata andrà sicuramente più piano di uno snello e giovincello, all'aumentare delle dimensioni aumenta anche la fame, per aumentare la veridicità dell'acquario sarebbe importante tenere in considerazione queste caratteristiche per vedere come influenzano la vita di un pesce durante la simulazione.
 
 >**In che modo l'acquario influisce sui pesci e viceversa?**  
-Brevemente, i pesci vengono influenzati dall'acquario secondo i parametri di cui abbiamo discusso prima: Se la temperatura è troppo alta osserveremo i pesci muoversi velocemente con tutte le conseguenze del caso, se troppo bassa il contrario, in entrambi i casi un'esposizione prolungata a temperature estreme li conduce alla morte. Il PH è subdolo, se fuori dal range ottimale porterà alla morte dei pesci quasi casualmente. Se l'ossigeno dovesse scarseggiare vedremo i pesci avvicinarsi alle piante per tentare di assorbirne il più possibile, anche in questo caso troppo poco ossigeno porterà al decesso. La luce non influisce sui pesci, certamente più luce c'è meglio li vedremo, ma attenzione alle piante! L'impurità dell'acqua rende l'ambiente viscoso, i pesci faticheranno a muoversi li vedremo quindi rallentare come se fosse freddo, questo fortunatamente non porta ad una morte improvvisa, ma un pesce troppo lento non riuscirà a nutrirsi, purtroppo causa ed effetto, la morte. I pesci influenzano l'acquario, tramite gli escrementi contribuiscono all'impurità dell'acqua, più pesci ci sono più in fretta l'acquario si sporcherà a parità di dimensione, inoltre i pesci consumano ossigeno, anche in questo caso la popolazione fa la differenza, fortunatamente i pesci non sono abbastanza voluminosi da interferire con la temperatura dell'acqua anche se ne soffrono i cambiamenti. In generale lo sporco nell'acqua aumenta il PH dell'acqua, effetto indiretto indesiderato dai pesci.
+Brevemente, i pesci vengono influenzati dall'acquario secondo i parametri di cui abbiamo discusso prima: se la temperatura è troppo alta osserveremo i pesci muoversi velocemente con tutte le conseguenze del caso, se troppo bassa il contrario, in entrambi i casi un'esposizione prolungata a temperature estreme li conduce alla morte. Il pH è subdolo, se fuori dal range ottimale porterà alla morte dei pesci quasi casualmente. Se l'ossigeno dovesse scarseggiare vedremo i pesci avvicinarsi alle piante per tentare di assorbirne il più possibile, anche in questo caso troppo poco ossigeno porterà al decesso. La luce non influisce sui pesci, certamente più luce c'è meglio li vedremo, ma attenzione alle piante! L'impurità dell'acqua rende l'ambiente viscoso, i pesci faticheranno a muoversi: li vedremo quindi rallentare come se fosse freddo, questo fortunatamente non porta ad una morte improvvisa, ma un pesce troppo lento non riuscirà a nutrirsi. I pesci influenzano l'acquario, tramite gli escrementi contribuiscono all'impurità dell'acqua, più pesci ci sono più in fretta l'acquario si sporcherà a parità di dimensione, inoltre i pesci consumano ossigeno, anche in questo caso la popolazione fa la differenza, fortunatamente i pesci non sono abbastanza voluminosi da interferire con la temperatura dell'acqua anche se ne soffrono i cambiamenti. In generale lo sporco nell'acqua ne aumenta il pH.
 
 >**Quali sono le caratteristiche della vegetazione? Come interagisce con il resto?**  
-La vegetazione ha un ruolo fondamentale nell'acquario, si distingue per numero e per altezza, una pianta più grande sarà bersaglio dei pesci più affamati, importantissima in quanto produce ossigeno e diminuisce il livello del PH nell'acqua, ciò non ci giustifica a riempire l'acquario di piante, questo porterebbe entrambi i livelli fuori dal range ammissibile causando ancora una volta la morte dei pesci. Come per i pesci potrebbe essere utile pensare di poter aggiungere e rimuovere le piante all'interno dell'acquario per mantenere il più possibile i parametri stabili, essendo questa un'operazione semplice, le piante non scappano, è sicuramente da tenere in considerazione. Le piante sono influenzate da solo il livello della luce nell'acquario, più luce significa più velocità di crescita, piante più grandi producono più ossigeno e depurano meglio l'acqua, ma vale lo stesso ragionamento catastrofico di prima, al contrario poca luce porterà le piante alla morte.
+La vegetazione ha un ruolo fondamentale nell'acquario, si distingue per numero e per altezza, una pianta più grande sarà bersaglio dei pesci più affamati, importantissima in quanto produce ossigeno e diminuisce il livello del pH nell'acqua, ciò non ci giustifica a riempire l'acquario di piante, questo porterebbe entrambi i livelli fuori dal range ammissibile causando ancora una volta la morte dei pesci. Le piante sono influenzate solo dalla luminosità dell'acquario, più luce significa più velocità di crescita, piante più grandi producono più ossigeno e depurano meglio l'acqua.
 
 >**Quali azioni può compiere il cliente su questo acquario digitale?**  
-Ovviamente il cliente dovrà interagire con l'acquario, altrimenti non potrebbe imparare niente e sarebbe inutile, in particolare in base a come abbiamo detto che l'ecosistema funziona, il proprietario dell'acquario potrà decidere di aggiungere o togliere pesci o piante, fornire cibo per erbivori o per carnivori, pulire l'acquario, regolare luce temperatura e ossigenazione dell'acqua, le basi per imparare a prendersi cura dei pesci. Per semplificare il lavoro di un principiante, si può pensare alla possibilità di mettere in pausa e conseguentemente di riprendere la simulazione, in questo modo in momenti critici si può imparare cosa fare con calma.
+Ovviamente il cliente dovrà interagire con l'acquario, altrimenti non potrebbe imparare niente e sarebbe inutile, in particolare in base a come abbiamo detto che l'ecosistema funziona, il proprietario dell'acquario potrà decidere di: aggiungere o togliere pesci o piante; fornire cibo per erbivori o per carnivori; pulire l'acquario; regolare la luminosità, la temperatura e l'ossigenazione dell'acqua. Per semplificare il lavoro di un principiante, si può pensare alla possibilità di mettere in pausa e di riprendere successivamente la simulazione, in questo modo in momenti critici si può imparare cosa fare con calma.
 
 >**Ha qualche nota da aggiungere?**  
 Per la prima versione del prodotto finito quello che ci siamo detti è più che sufficiente, ma per il futuro potrebbe essere interessante aggiungere qualche funzionalità per renderlo più apprezzabile come ad esempio: la possibilità di controllare un pesce all'interno dell'acquario manualmente per rendere la simulazione non solo un lavoro ma anche ludica, ricostruire l'albero genealogico dei pesci, per osservare la dinastia e rendersi conto di quale famiglia sia stata la più forte nelle generazioni. Inoltre si potrebbe consentire di spegnere l'acquario e riprendere dal punto in cui si era rimasti e mettere la possibilità di velocizzare o rallentare la simulazione per evitare le parti noiose o per osservare nel dettaglio certi momenti.
@@ -65,7 +57,7 @@ Dall'intervista con Filippo Benvenuti, il Product Owner, sono stati dedotti i se
    * 2.1.3. interazioni fra pesci e vegetazione
 * 2.2. aggiungere e rimuovere pesci in tempo reale
 * 2.3. memorizzazione dati dell'acquario all’interno di un database:
-   * 2.3.1. possibilità di estrarre informazioni interessanti
+   * 2.3.1. possibilità di estrarre informazioni
    * 2.3.2. visionare grafici sull'andamento dei dati salvati
 * 2.4. visualizzazione in tempo reale di:
    * 2.4.1. numero di esseri viventi divisi per specie
@@ -73,7 +65,7 @@ Dall'intervista con Filippo Benvenuti, il Product Owner, sono stati dedotti i se
    * 2.4.3. luminosità
    * 2.4.4. pH dell’acqua
    * 2.4.5. impurità dell'acqua
-   * 2.4.6. ossigeno
+   * 2.4.6. ossigenazione dell'acqua
 * 2.5. interazione con la simulazione tramite:
    * 2.5.1. aggiunta cibo
    * 2.5.2. regolazione termostato
@@ -106,7 +98,6 @@ Dall'intervista con Filippo Benvenuti, il Product Owner, sono stati dedotti i se
     * 3.2.1. acquario
       * 3.2.1.1. dimensione
       * 3.2.1.2. parametri acqua
-      * 3.2.1.3. ecosistema (popolazione + vegetazione)
    * 3.2.2. pesce 
       * 3.2.2.1. posizione nell'acquario
       * 3.2.2.2. parametri del pesce
@@ -121,18 +112,17 @@ Dall'intervista con Filippo Benvenuti, il Product Owner, sono stati dedotti i se
       * 3.2.3.2. dimensione
       * 3.2.3.3. velocità produzione ossigeno
    * 3.2.4. interazioni fra entità
-      * 3.2.4.1. pesce ⇐⇒ pesc
+      * 3.2.4.1. pesce ⇐⇒ pesce
       * 3.2.4.2. pesce ⇒ alga
       * 3.2.4.3. pesce ⇐⇒ acquario
       * 3.2.4.4. acquario ⇐⇒ alga
 * 3.3. database
    * 3.3.1. memorizzazione dati ad ogni iterazione
      * 3.3.1.1. dati pesci
+         * 3.3.1.1.1 csv
+         * 3.3.1.1.2 immagini
      * 3.3.1.2. dati acquario
      * 3.3.1.3. dati alghe
-   * 3.3.2. dati pesci
-     * 3.3.2.1. csv
-     * 3.3.2.2. immagini
 
 ### 3.4 Requisiti non funzionali
 * 4.1. GUI responsiva
@@ -144,13 +134,4 @@ Dall'intervista con Filippo Benvenuti, il Product Owner, sono stati dedotti i se
 * 5.2. ScalaFX
 * 5.3. ScalaTest
 * 5.4. Prolog
-* 5.5. Git
-   * 5.5.1. GitHub
-   * 5.5.2. GitHub Projects
-   * 5.5.3. GitHub Actions
 * 5.6. sbt
-
-
-
-
-//CONTROLLA CHE PIPPO SIA SEGNATO COME DOMAIN EXPERT NELLA RELAZIONE!!!!!

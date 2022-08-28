@@ -33,7 +33,7 @@ Oltre a ciò, dato che il team, nella sua interezza, ha già utilizzato questo p
 
 ### 4.4 Descrizione dettagliata delle componenti
 
-Sottocomponenti dei macrocomponenti mvc:
+Sottocomponenti dei macrocomponenti MVC:
 * Model 
   * Acquario
   * Pesce
